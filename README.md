@@ -15,19 +15,55 @@ Please fill in the blank
 #include <string>
 
 class Car {
-public:
-    std::string model;
-    int year;
 
+    private: 
+              std::string model;
+              int year;
+              std::string color;
+
+    public:
+
+               // Getters
+               Car::int getYear (){
+                    return year;
+                }
+
+               Car::string getModel (){
+                    return model;
+                }
+
+                Car::string getColor (){
+                    return color;
+                }
+
+
+                // Setters
+                void Car::setYear (int tempYear){
+                    year = tempYear;
+                }
+
+                void Car::setColor (string tempColor){
+                    color = tempColor;
+                }
+
+                void Car::setModel (string tempModel){
+                    model = tempModel;
+                }
+
+    
 
     void displayDetails() {
-        std::cout << "Model: " << model << ", Year: " << year << ", Color: " << color << std::endl;
+        std::cout << "Model: " << getModel() << ", Year: " << getYear() << ", Color: " << getColor() << std::endl;
+
     }
 };
 
 int main() {
     Car myCar;
 
+    myCar.setYear(2015);
+    myCar.setColor("Grey");
+    myCar.setModel("Civic);
 
     myCar.displayDetails();
 
